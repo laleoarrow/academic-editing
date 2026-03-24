@@ -1,0 +1,8 @@
+{
+  "name": "academic-editing",
+  "version": "1.0.0",
+  "description": "Evidence-first academic editing for medical/biological SCI manuscripts. Verify numbers, model results, sample sizes before polishing.",
+  "author": "laleoarrow",
+  "keywords": ["academic-editing", "manuscript", "sci", "polishing", "evidence-first"],
+  "license": "MIT"
+}
