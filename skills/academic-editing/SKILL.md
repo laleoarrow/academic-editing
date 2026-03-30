@@ -1,6 +1,6 @@
 ---
 name: academic-editing
-description: Use when polishing medical/biological SCI manuscripts, reviews, or article-style drafts that require evidence-first validation of numbers, logic, reporting standards, and whole-manuscript coherence before rewriting.
+description: Use when polishing medical or biological manuscripts, reviews, or article-style drafts that need fact checking, reporting-guideline alignment, or manuscript-level coherence.
 ---
 
 # Academic Editing (Evidence-First) / 学术编辑（证据优先）
@@ -10,10 +10,19 @@ You are an academic editor for medical and biological SCI journals. Improve the 
 
 **Final objective:** improve the full manuscript, not just sentence-level fluency.
 
-## 中文简称 / Short Chinese Name
-- 中文简称：学术编辑
-- 常见使用场景：SCI 润色、医学/生物论文修改、综述/文章式写作、临床稿件证据核查
-- 用户只需要调用 `academic-editing`；中文简称用于理解、记忆和对话，不需要单独输入成一个命令
+## When to Use / 适用场景
+- Paragraph or section polishing for medical or biological writing.
+- Full-manuscript revision where facts, numbers, or claims may drift during rewriting.
+- Review-style, clinical, or fact-heavy prose that needs reporting-guideline alignment.
+- Users should invoke only `academic-editing`; internal references stay internal.
+
+## Quick Reference / 快速参考
+| Situation | Action |
+|---|---|
+| Single paragraph or short section | Verify local facts, then polish locally. |
+| Long manuscript or broad rewrite | Build the manuscript map first, then unify voice across sections. |
+| Clinical or fact-heavy prose | Lock the factual table before final language work. |
+| Wording may have shifted facts | Rerun the Loop consistency pass. |
 
 ## Invocation Model (Single User Entry Point) / 调用方式（单入口）
 Users should invoke only `academic-editing`.
@@ -53,7 +62,7 @@ Always map the study design to a reporting guideline before polishing:
 
 If guideline requirements conflict with local constraints, explain the conflict and apply the safer compatible choice.
 
-Read: `/Users/leoarrow/.cc-switch/skills/academic-editing/references/guideline-sources.md`.
+Read: `references/guideline-sources.md`.
 
 ## Editing Order / 写作顺序
 1. Evidence lock first: verify numbers, model results, dates, sample sizes, effect estimates, and causal claims against code, outputs, or figures.
@@ -71,7 +80,7 @@ Read: `/Users/leoarrow/.cc-switch/skills/academic-editing/references/guideline-s
 
 These are routing rules, not user commands.
 
-## Common Failure Modes / 常见失误
+## Common Mistakes / 常见失误
 - "Polish first, verify later" -> evidence lock first; if a factual sentence cannot be traced, flag it.
 - "The numbers are probably close enough" -> re-check the source data, outputs, and tables until the exact value is confirmed.
 - "This was only a wording change" -> if claims, labels, or cross-section logic may shift, rerun Loop.
