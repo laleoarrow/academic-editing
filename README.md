@@ -1,21 +1,21 @@
 # academic-editing
 
-### Academic Editing — Evidence-First Manuscript Polishing
+### 学术编辑 — 证据优先的论文润色
 
-**[🇨🇳 中文](README.zh-CN.md)** | **🇺🇸 English**
+**🇨🇳 中文**
 
 <p>
   <img src="https://img.shields.io/badge/Claude_Code-black?style=flat-square&logo=anthropic&logoColor=white" alt="Claude Code">
   <img src="https://img.shields.io/badge/OpenAI_Codex_CLI-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI Codex CLI">
-  <img src="https://img.shields.io/badge/Evidence-First-blue?style=flat-square" alt="Evidence-First">
+  <img src="https://img.shields.io/badge/Evidence-First-blue?style=flat-square" alt="证据优先">
   <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="MIT License">
 </p>
 
 > **证据优先的 SCI 论文润色**。在修改任何包含数字、模型结果、样本量、效应估计的句子之前，必须先验证原始证据。
 
-An AI Agent skill for polishing medical/biological SCI manuscripts with **evidence-first validation**. Preserves scientific correctness while improving language.
+一个 AI Agent 技能，用于医学/生物 SCI 论文润色，强制执行**证据优先验证**。在提升语言的同时保持科学准确性。
 
-## Core Principle: Evidence-First
+## 核心原则：证据优先
 
 ### 问题：AI 润色的陷阱
 
@@ -38,7 +38,7 @@ An AI Agent skill for polishing medical/biological SCI manuscripts with **eviden
 4. Loop 检查：数字是否漂移？逻辑是否断裂？
 ```
 
-## Workflow
+## 工作流程
 
 ```
 用户请求论文润色
@@ -75,27 +75,27 @@ An AI Agent skill for polishing medical/biological SCI manuscripts with **eviden
 └───────────────────┘
 ```
 
-## Study-Type Routing
+## 研究类型路由
 
-| Study Type | Internal Reference |
-|------------|-------------------|
-| Clinical cohort / observational | `references/cohort-study-edit.md` |
-| Bioinformatics (GWAS, single-cell, MR) | `references/bioinfo-edit.md` |
-| Reviews, perspectives, review-style articles | `references/journal-writing.md` |
-| Clinical manuscripts, fact-heavy prose | `references/clinical-accuracy.md` |
-| Full papers, major rewrites | `references/manuscript-coherence.md` |
+| 研究类型 | 内部参考文档 |
+|----------|-------------|
+| 临床队列 / 观察性研究 | `references/cohort-study-edit.md` |
+| 生信分析（GWAS、单细胞、MR） | `references/bioinfo-edit.md` |
+| 综述、观点、综述式文章 | `references/journal-writing.md` |
+| 临床稿件、事实密集型文本 | `references/clinical-accuracy.md` |
+| 全文论文、重大修改 | `references/manuscript-coherence.md` |
 
-## Reporting Guidelines
+## 报告规范
 
-Always map to a reporting guideline before polishing:
+润色前必须映射到报告规范：
 
-- **Trials**: CONSORT / SPIRIT
-- **Observational/Cohort**: STROBE
-- **Reviews/Meta-analyses**: PRISMA
-- **Diagnostics/Prediction**: STARD / TRIPOD
+- **临床试验**: CONSORT / SPIRIT
+- **观察性/队列研究**: STROBE
+- **综述/Meta 分析**: PRISMA
+- **诊断/预测**: STARD / TRIPOD
 - **MR/GWAS/Omics**: STROBE-MR / STREGA
 
-## Integration with bioinfo-autopilot
+## 与 bioinfo-autopilot 的集成
 
 ```
 ┌─────────────────────────────────────────────────────┐
@@ -112,21 +112,21 @@ Always map to a reporting guideline before polishing:
 └─────────────────────────────────────────────────────┘
 ```
 
-## Installation
+## 安装
 
-### Quick Install for AI Agents
+### 快速安装（告诉 AI Agent）
 
-**For Codex CLI:**
+**Codex CLI:**
 ```
-Tell Codex: "Install academic-editing according to instructions at https://github.com/laleoarrow/academic-editing#installation"
-```
-
-**For Claude Code:**
-```
-Tell Claude: "Install academic-editing according to instructions at https://github.com/laleoarrow/academic-editing#installation"
+告诉 Codex: "根据 https://github.com/laleoarrow/academic-editing#installation 的说明安装 academic-editing"
 ```
 
-### Manual Install
+**Claude Code:**
+```
+告诉 Claude: "根据 https://github.com/laleoarrow/academic-editing#installation 的说明安装 academic-editing"
+```
+
+### 手动安装
 
 **Claude Code:**
 ```bash
@@ -140,10 +140,10 @@ git clone https://github.com/laleoarrow/academic-editing.git ~/agents/academic-e
 ln -s ~/agents/academic-editing/codex/academic-editing ~/.codex/skills/academic-editing
 ```
 
-## Related Skills
+## 相关 Skills
 
-| Skill | Purpose | GitHub |
-|-------|---------|--------|
+| Skill | 用途 | GitHub |
+|-------|------|--------|
 | **bioinfo-autopilot** | 生信分析，官方文档优先 | https://github.com/laleoarrow/bioinfo-autopilot |
 | **pua-academic** | 学术压力引擎 | https://github.com/laleoarrow/pua-academic |
 
